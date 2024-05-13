@@ -39,14 +39,38 @@
       p.username {
         font-weight: bold;
       }
+      p.text {
+        width: 50%;
+      }
+      html, body {
+        margin: 0;
+        border: 0;
+        width: 100%;
+        }
+
+        body {
+            padding: 0 100px;
+        }
+
+        #main {
+            margin: 0 auto; /* in case you want to set a fixed width on this as well */
+        }
     </style>
   </head>
   <body>
-    <h1>Laksh Gupta</h1>
-    <p>Welcome to my Personal Homepage.</p>
-    <p>I am a 4th-year undergraduate student at Ahmedabad University, India. I am a Physics major currently working on my undergraduate thesis under Samyaday Choudhury (Ahmedabad University) and in collaboration with Annalisa Calamida (Space Telescope Science Institute, US). <a href = "ugthesis.html">Here</a> is my undergraduate thesis. Here is my CV. </p>
-    <p>I grew up in Lucknow, India and attended La Martiniere College </p>
-    <p>Contact me via lakshgupta.phy@gmail.com or laksh.g@ahduni.edu.in</p>
+    <div id="main"></div>
+    <h1 align="center">Laksh Gupta</h1>
+    <p class="text">Welcome to my Personal Homepage.</p>
+    <p class="text">I am a 4th-year undergraduate student at Ahmedabad University, India. 
+        I am a Physics major currently working on my undergraduate thesis 
+        under Samyaday Choudhury (Ahmedabad University) and in collaboration 
+        with Annalisa Calamida (Space Telescope Science Institute, US). 
+        <a href = "ugthesis.html">Here</a> is my undergraduate thesis. 
+        Here is my CV. </p>
+    
+    <p class="text">I grew up in Lucknow, India and attended La Martiniere College </p>
+    <p class="text">My interests are </p>
+    <p class="text">Contact me via lakshgupta.phy@gmail.com or laksh.g@ahduni.edu.in</p>
     
     <!-- <img
       src="images/NGC2808.jpg"
