@@ -1,131 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laksh Gupta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style type="text/css">
-      @font-face {
-        font-family: "Computer Modern";
-        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-      }
-      @font-face {
-        font-family: "Computer Modern";
-        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-        font-weight: bold;
-      }
-      @font-face {
-        font-family: "Computer Modern";
-        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-        font-style: italic, oblique;
-      }
-      @font-face {
-        font-family: "Computer Modern";
-        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-        font-weight: bold;
-        font-style: italic, oblique;
-      }
+        body {
+            font-family: serif; /* Apply the font */
+            margin: 0;
+            padding: 0 15%;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling if the strip extends beyond the viewport */
+        }
 
-      body {
-        font-family: "Computer Modern", sans-serif;
-        margin: 0;
-        padding: 0 15%;
-        position: relative;
-        min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
-      }
+        body::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5cm; /* Height of the grey strip */
+            background-color: grey; /* Grey color for the strip */
+            z-index: -1; /* Place behind other content */
+        }
 
-      #main {
-        margin: 0 auto;
-        padding-bottom: 50px; /* Space for the footer */
-      }
+        #main {
+            margin: 0 auto;
+            padding-bottom: 50px; /* Space for the footer */
+        }
 
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 30px 0;
-      }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 30px 0;
+        }
 
-      .left-column {
-        width: 50%;
-      }
+        .left-column {
+            width: 70%;
+        }
 
-      .right-column {
-        width: 50%;
-        text-align: center;
-      }
+        .right-column {
+            width: 50%;
+            text-align: center;
+        }
 
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 400px; /* Adjust this value as needed */
-      }
+        .right-column img {
+            max-width: 300px; /* Adjust this value as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: -150px;
+        }
 
-      h1 {
-        text-align: center;
-      }
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Adjust this value as needed */
+        }
 
-      .links {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+        h1 {
+            text-align: center;
+        }
 
-      .links a {
-        margin: 0 15px;
-        text-decoration: none;
-        /* font-weight: bold; */
-        color: grey; /* Set the color of the links to grey */
-      }
+        .links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-      p.text {
-        margin: 10px 0;
-      }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: grey; /* Set the color of the links to grey */
+        }
 
-      .footer {
-        position: absolute;
-        bottom: 2cm; /* 2 cm above the bottom */
-        width: 75%;
-        text-align: center;
-        font-size: 0.8em;
-      }
+        p.text {
+            margin: 10px 0;
+            font-family: serif; /* Apply the font */
+            text-align: justify; /* Justify text */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2cm; /* 2 cm above the bottom */
+            width: 75%;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .tex sub, .latex sub, .latex sup {
+            text-transform: uppercase;
+        }
+
+        .tex sub, .latex sub {
+            vertical-align: -0.5ex;
+            margin-left: -0.1667em;
+            margin-right: -0.125em;
+        }
+
+        .tex, .latex, .tex sub, .latex sub {
+            font-size: 1em;
+        }
+
+        .latex sup {
+            font-size: 0.85em;
+            vertical-align: 0.15em;
+            margin-left: -0.36em;
+            margin-right: -0.15em;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="main">
-      <h1>Laksh Gupta</h1>
-      <div class="links">
-        <a href="Undergraduate Thesis.html">Undergraduate Thesis</a>
-        <a href="CV.html">Curriculum Vitae</a>
-        <a href="Contact.html">Contact</a>
-      </div>
-      <div class="container">
-        <div class="left-column">
-          <p class="text">Welcome to my Personal Homepage!</p>
-
-          <p class="text">I am a recent graduate from <a href="https://ahduni.edu.in/">Ahmedabad University, India</a>, where I majored in Physics alongside a minor in Mathematics. I am currently located in Bengaluru.</p>
-          
-          <p class="text">Working alongside <a href="https://sites.google.com/view/samyadayspage/home">Dr. Samyaday Choudhury</a> (Ahmedabad University, India) and in collaboration with
-            <a href="https://www.stsci.edu/stsci-research/research-directory/annalisa-calamida">Dr. Annalisa Calamida</a> (Space Telescope Science Institute, USA), I carried out my undergraduate thesis work titled 
-            '<a href="Undergraduate Thesis.pdf">Study of White Dwarfs in the Globular Cluster NGC2808</a>'. More about this <a href="Undergraduate Thesis.html">here</a>.</p>
-
-          <p class="text">I grew up in Lucknow, India and attended La Martiniere College.</p>
-          
-          <p class="text">My interests include...</p>
-
-          <p class="text"> Find my CV <a href="CV.pdf">here</a>.
-
-          <p class="text">Contact me at 
-            lakshgupta[dot]phy[at]gmail[dot]com or 
-            laksh[dot]g[at]ahduni[dot]edu[dot]in
-              
+        <h1>Laksh Gupta</h1>
+        <div class="links">
+            <!-- <a href="Undergraduate Thesis.html">Undergraduate Thesis</a> -->
+            <!-- <a href="CV.html">Curriculum Vitae</a> -->
+            <!-- <a href="Contact.html">Contact</a> -->
         </div>
-        <div class="right-column">
-          <img src="Profile Photo.jpeg" alt="Your Photo">
+        <div class="container">
+            <div class="left-column">
+                <p class="text">Welcome to my Personal Homepage!</p>
+                <p class="text">I am a recent graduate from <a href="https://ahduni.edu.in/">Ahmedabad University, India</a>, where I majored in Physics alongside a minor in Mathematics. I am currently located in Bengaluru.</p>
+                <p class="text">Working alongside <a href="https://sites.google.com/view/samyadayspage/home">Dr. Samyaday Choudhury</a> (Ahmedabad University, India) and in collaboration with
+                    <a href="https://www.stsci.edu/stsci-research/research-directory/annalisa-calamida">Dr. Annalisa Calamida</a> (Space Telescope Science Institute, USA), I carried out my undergraduate thesis work titled 
+                    '<a href="Undergraduate Thesis.pdf">Study of White Dwarfs in the Globular Cluster NGC2808</a>'. A brief description of this work can be found <a href="Undergraduate Thesis.html">here</a>.</p>
+                <p class="text">Currently...</p>
+                <p class="text">My scientific interests include various stellar populations in Globular Clusters such as White Dwarf Stars and Blue Straggler Stars. Other than this, I am interested in single 
+                    stellar evolution and evolution of binary stellar systems. Recently, I have been curious to know about implications of black holes at the center of globular clusters. Nevertheless, I am not limited to these areas of research.</p>
+                <p class="text">I grew up in Lucknow, India and attended La Martiniere College.</p>
+                <p class="text">My hobbies include cycling, painting and writing documents in <span class="tex">T<sub>e</sub>X</span>.</p> 
+                <p class="text">Find my CV <a href="CV.pdf">here</a>.</p>
+                <p class="text">
+                    Contact me at:
+                    <span style="display: block; text-align: left; margin-left: 20px;">
+                        lakshgupta[dot]phy[at]gmail[dot]com
+                    </span>
+                    <span style="display: block; text-align: left; margin-left: 20px;">
+                        laksh[dot]g[at]ahduni[dot]edu[dot]in
+                    </span>
+                </p>
+            </div>
+            <div class="right-column">
+                <img src="Profile Photo.jpeg" alt="Your Photo">
+            </div>
         </div>
-      </div>
     </div>
     <div class="footer">
-      <p>Copyright &copy; Laksh Gupta 2024 (Last Updated on 13th August 2024)</p>
+        <p>Copyright &copy; Laksh Gupta 2024 (Last Updated on 13th August 2024)</p>
     </div>
-  </body>
+</body>
 </html>
