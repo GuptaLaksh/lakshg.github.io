@@ -30,25 +30,28 @@
         font-family: "Computer Modern", sans-serif;
         margin: 0;
         padding: 0 15%;
+        position: relative;
+        min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
       }
 
       #main {
         margin: 0 auto;
+        padding-bottom: 50px; /* Space for the footer */
       }
 
       .container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 20px 0;
+        padding: 30px 0;
       }
 
       .left-column {
-        width: 45%;
+        width: 50%;
       }
 
       .right-column {
-        width: 45%;
+        width: 50%;
         text-align: center;
       }
 
@@ -62,34 +65,67 @@
         text-align: center;
       }
 
+      .links {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .links a {
+        margin: 0 15px;
+        text-decoration: none;
+        /* font-weight: bold; */
+        color: grey; /* Set the color of the links to grey */
+      }
+
       p.text {
         margin: 10px 0;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 2cm; /* 2 cm above the bottom */
+        width: 75%;
+        text-align: center;
+        font-size: 0.8em;
       }
     </style>
   </head>
   <body>
     <div id="main">
       <h1>Laksh Gupta</h1>
+      <div class="links">
+        <a href="Undergraduate Thesis.html">Undergraduate Thesis</a>
+        <a href="CV.html">Curriculum Vitae</a>
+        <a href="Contact.html">Contact</a>
+      </div>
       <div class="container">
         <div class="left-column">
-          <p class="text">Welcome to my Personal Homepage.</p>
-          <p class="text">
-            I am a 4th-year undergraduate student at Ahmedabad University, India. 
-            I am a Physics major currently working on my undergraduate thesis 
-            under Samyaday Choudhury (Ahmedabad University) and in collaboration 
-            with Annalisa Calamida (Space Telescope Science Institute, US). LOL! 
-            <a href="ugthesis.html">Here</a> is my undergraduate thesis. 
-            Here is my CV.
-          </p>
+          <p class="text">Welcome to my Personal Homepage!</p>
+
+          <p class="text">I am a recent graduate from <a href="https://ahduni.edu.in/">Ahmedabad University, India</a>, where I majored in Physics alongside a minor in Mathematics. I am currently located in Bengaluru.</p>
+          
+          <p class="text">Working alongside <a href="https://sites.google.com/view/samyadayspage/home">Dr. Samyaday Choudhury</a> (Ahmedabad University, India) and in collaboration with
+            <a href="https://www.stsci.edu/stsci-research/research-directory/annalisa-calamida">Dr. Annalisa Calamida</a> (Space Telescope Science Institute, USA), I carried out my undergraduate thesis work titled 
+            '<a href="Undergraduate Thesis.pdf">Study of White Dwarfs in the Globular Cluster NGC2808</a>'. More about this <a href="Undergraduate Thesis.html">here</a>.</p>
+
           <p class="text">I grew up in Lucknow, India and attended La Martiniere College.</p>
-          <p class="text">My interests are...</p>
-          <p class="text">Contact me via lakshgupta.phy@gmail.com or laksh.g@ahduni.edu.in</p>
+          
+          <p class="text">My interests include...</p>
+
+          <p class="text"> Find my CV <a href="CV.pdf">here</a>.
+
+          <p class="text">Contact me at 
+            lakshgupta[dot]phy[at]gmail[dot]com or 
+            laksh[dot]g[at]ahduni[dot]edu[dot]in
+              
         </div>
         <div class="right-column">
           <img src="Profile Photo.jpeg" alt="Your Photo">
         </div>
       </div>
-      <p style="text-align: center;">Copyright &copy; Laksh Gupta 2024</p>
+    </div>
+    <div class="footer">
+      <p>Copyright &copy; Laksh Gupta 2024 (Last Updated on 13th August 2024)</p>
     </div>
   </body>
 </html>
