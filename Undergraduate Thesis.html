@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,36 @@
 
       body {
         font-family: serif;
-        /* font-size: 1.4em; */
         margin: 0;
         padding: 0 15%;
         position: relative;
-        min-height: 165vh;
-        overflow-x: hidden; /* Prevent horizontal scrolling if the strip extends beyond the viewport */
+        min-height: 170vh;
+        overflow-x: hidden;
+        background-image: url('2808.png'); /* Replace 'background.jpg' with your image path */
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Overlay to add grey color over the background image */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.8); /* Grey color with 70% opacity */
+        z-index: -1; /* Keep it behind the content */
       }
 
       .text {
-        margin: 5px ; /* Adjust this value to change spacing between paragraphs */
-        text-align: justify; /* Justify text */
+        margin: 20px;
+        margin-left: -0px;
+        text-align: justify;
+        width: 100%;
+        font-size: 1.8em;
       }
 
       body::after {
@@ -28,90 +47,67 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 5cm; /* Height of the grey strip */
-        background-color: grey; /* Grey color for the strip */
-        z-index: -1; /* Place behind other content */
+        height: 5cm;
+        background-color: grey;
+        z-index: -2;
       }
 
       #main {
         margin: 0 auto;
-        padding-bottom: 30px; /* Space for the footer */
+        padding-bottom: 30px;
       }
 
       .container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 2px 0; /* spacing between paragraphs */
-        gap: 30px; /* spacing between coloumns */
+        padding: 2px 0;
+        gap: 30px;
       }
 
       h1 {
         text-align: center;
       }
 
-      .left-column {
-        width: 50%; /* Adjusted width */
-      }
-
-      .right-column {
-        width: 50%; /* Adjusted width */
-      }
-
       .footer {
         position: absolute;
-        bottom: 2cm; /* 2 cm above the bottom */
-        width: 50%;
+        bottom: 2cm;
+        width: 75%;
         text-align: center;
         font-size: 0.8em;
       }
 
     </style>
+
+    <!-- MathJax setup -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
     <div id="main">
-      <h1>Laksh Gupta</h1>
-
-      <h2>A brief description of my undergraduate thesis (<a href="Undergraduate Thesis.pdf">link</a>)</h2>
+      <p class="text" style="font-size: 3.1em;" style="text-align: center;">A Stellar Murder Investigation: Where are the corpses?</p> 
+      <!-- <p class="text" style="font-size: 3.1em;" style="text-align: center;">Study of White Dwarfs in the Globular Cluster NGC2808</p> -->
+      <p class="text" style="font-size: 2.7em;"> A brief description of my undergraduate thesis (<a href="Undergraduate Thesis.pdf">link</a>)</p>
 
       <div class="container">
         <div class="left-column">              
-
-          <p class="text"> NGC2808 is a very intriguing and unusual galactic globular cluster that purportedly
+          
+          <p class="text">NGC2808 is a very intriguing and unusual galactic globular cluster that purportedly
             has undergone more than one episode of star formation, hosting distinct stellar subpopulations. Our study focused on the identification of various types of WDs
             - e.g. ones with a core composed of carbon and oxygen (CO-core) and ones with a
             core composition of helium (He-core). This study is crucial for understanding the formation
-            scenario of He-core WDs, which remains elusive and could depend on factors like – binarity, cluster
+            scenario of He-core WDs, which remains elusive and could depend on factors like binarity, cluster
             mass, etc. This is needed to understand the formation scenario of He-core WDs since
             such stars supposedly form through binary interactions for the Universe’s ∼ 13 billion year history.</p>
-
-        </div>
-        <div class="right-column">
-          <img src="NGC2808.jpg" alt="Your Photo" style="border: 1px solid black;" height="350px" width="350px">
-          <p class="text">Figure 1: Milky Way globular cluster NGC2808 (Credit: NASA/ESA)</p>
-        </div>
-        
-      </div>
-
-      <div class="container">
-        <div class="left-column">
-          <img src="MSTO.png" alt="Your Photo" style="border: 1px solid black;" height="380px" width="430px">
-          <p class="text">Figure 1: </p>
-        </div>
-        <div class="right-column">              
-
-          <p class="text"> For this study, we used the photometric catalog, reduced using Method 3, from the HUG Survey (openly accessible from the Milkulski Space Archrive for Telescopes) to 
+          
+          <p class="text">For this study, we used the photometric catalog, reduced using Method 3, from the HUG Survey (openly accessible from the Milkulski Space Archrive for Telescopes) to 
             study white dwarf (WD) stars in the cluster. The catalog provided magnitude of stars in F275W, F336W, F438W, F616W and F814W filters. Using various combinations of filters, color-magnitude diagrams were plotted. But only the UV and Optical filters were primarily
             used since WDs are faint objects. </p>  
-
-          <p class="text"> Theoretical models including isochrones, evolutionary tracks and WD cooling models were plotted to perform star counts and crossing time analysis 
-            of main sequence turnoff (MSTO), red giant branch (RGB) and WD stars. </p>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="left-column">
-          <p class="text"> The comparison of WD, MSTO and RGB star counts and crossing times suggested
+      
+          <p class="text">Theoretical models including isochrones, evolutionary tracks and WD cooling models were plotted to perform star counts and crossing time analysis 
+            of main sequence turnoff (MSTO), red giant branch (RGB) and WD stars.</p>
+          
+          <p class="text">The comparison of WD, MSTO and RGB star counts and crossing times suggested
             that the WD sequence primarily contains CO-core WDs. However, with the only He-core WD cooling model
             that was fit, it is suggestive that NGC2808 may not host He-core WDs. 
             A bimodality
@@ -119,36 +115,28 @@
             sequence corresponding to He-core WDs, as was discovered in the globular cluster Omega Centauri. This
             was contrary to our expectations since NGC2808 is a massive Globular Cluster. It is
             possible that the number of He-core WDs is smaller in fraction and mixed with the CO
-            WD sequence or is fainter and redder than the limits analyzed in this study. 
-             </p>
-
-             <p class="text">Further
+            WD sequence or is fainter and redder than the limits analyzed in this study.</p>
+      
+          <p class="text">Further
               studies, including fitting more He-core models and analyzing deeper photometric data
-              NGC2808, could help conclude.</p>
+              of NGC2808, could help conclude.</p>
         </div>
+      
         <div class="right-column">
-          <img src="WD.png" alt="Your Photo" style="border: 1px solid black;" height="600px" width="430px">
+          <div style="margin-top: 20px;"></div>
+
+          <img src="MSTO.png" alt="MSTO" style="border: 1px solid black;" height="380px" width="430px">
+          <p class="text">Figure illustrates the method implemented to count MSTO stars and calculating crossing times.</p>
+        
+          <img src="WD.png" alt="White Dwarfs" style="border: 1px solid black;" height="600px" width="430px">
+          <p class="text">Figure 2: Pink and teal-coloured triangles are White Dwarf stars.</p>
+      
         </div>
       </div>
-    </div>
-
+       
     <div class="footer">
       <p>Copyright &copy; Laksh Gupta 2024 (Last Updated on 13th August 2024)</p>
     </div>
   </body>
 </html>
 
-
-<!-- identify WDs. Star counts of the main sequence turnoff (MSTO) stars and red giant branch (RGB)
-stars were performed, and artificial star test results corrected their completeness.  -->
-
-      <!-- <div class="container">
-        <div class="left-column">
-          <img src="Profile Photo.jpeg" alt="Your Photo">
-        </div>
-        <div class="right-column">              
-          <p class="text"> For this study, we used the photometric catalog, reduced using Method 3, from the HUG Survey (openly accessible from the Milkulski Space Archrive for Telescopes) to 
-            study white dwarf (WD) stars in the cluster. The catalog provided magnitude of stars in F275W, F336W, F438W, F616W and F814W filters. Using various combinations of filters, color-magnitude diagrams were plotted. But only the UV and Optical filters were primarily
-            used since WDs are faint objects. </p>  
-        </div>
-      </div> -->
